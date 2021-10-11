@@ -1,1 +1,8 @@
-/* Your CSS definitions here */
+h2 {
+  display: inline;
+  padding: 5px;
+}
+
+box {
+  padding: 10px;
+}
