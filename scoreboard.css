@@ -1,8 +1,36 @@
+div {
+  display: inline-block;
+}
+
+#scoreboard {
+  background-color: RGB(50, 100, 85);
+}
+
+h2,
+h3,
+box {
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 28pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
 h2 {
   display: inline;
   padding: 5px;
 }
 
 box {
-  padding: 10px;
+  padding: 5px 7px 5px 7px;
+  border: 3px solid black;
+}
+
+#aR,
+#hR {
+  border: 3px solid white;
 }
