@@ -1,9 +1,14 @@
 div {
   display: inline-block;
+  margin: 10px;
 }
 
 #scoreboard {
   background-color: RGB(50, 100, 85);
+}
+
+#scores {
+  text-align: center;
 }
 
 h2,
@@ -15,18 +20,20 @@ box {
 }
 
 h1 {
-  font-size: 28pt;
+  font-size: 20pt;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  margin: 0px 0px 20px 0px;
 }
 
 h2 {
   display: inline;
-  padding: 5px;
+  padding: 0px 8px 0px 8px;
+  position: relative;
 }
 
 box {
-  padding: 5px 7px 5px 7px;
+  padding: 5px 5px 5px 5px;
   border: 3px solid black;
 }
 
