@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="scoreboard.css" />
   </head>
   <body>
+    <!--SCOREBOARD-->
     <div id="scoreboard">
-    <div id="teams">
+    <div id="teams"> <!--HOME and AWAY labels-->
       <h3><em>AWAY</em></h3>
       <h3><em>HOME</em></h3>
     </div>
 
-    <div id="scores">
+    <div id="scores"> <!--inning numbers-->
     <h1><em>STOKES FIELD</em></h1>
     <h2 class='scoreboard'>1</h2>
     <h2 class='scoreboard'>2</h2>
@@ -24,7 +25,7 @@
     <h2 class='scoreboard'>7</h2>
     <h2 class='scoreboard'>R</h2>
     
-    <p>
+    <p> <!--number of home runs by AWAY team-->
       <box id="ain1">0</box>
       <box id="ain2">0</box>
       <box id="ain3">0</box>
@@ -33,7 +34,7 @@
       <box id="ain6">0</box>
       <box id="ain7">0</box>
       <box id="aR">0</box></p>
-    <p>
+    <p> <!--number of home runs by HOME team-->
       <box id="hin1">0</box>
       <box id="hin2">0</box>
       <box id="hin3">0</box>
@@ -43,22 +44,30 @@
       <box id="hin7">0</box>
       <box id="hR">0</box></p>
     </div>
-    <div id='photo'>
+
+    <div id='photo'> <!--Puget Sound logo-->
       <img src='images/ups.png' height=120px alt='Puget Sound logo'/>
     </div>
     </div>
 
+
+    <!--CONTROL CENTER-->
     <div id='controlcenter'>
     <h1>CONTROL CENTER</h1>
-    <div id='controls'>
-    <div id=whoinning>
-      <h2>Who:</h2>
+
+    <div>
+      <h2 id='inline'>Who:</h2>
+      <button id='inline'>Away</button></div>
+    <div>
       <h2>Inning:</h2>
-    </div>
+      <button>num</button></div>
       <h2>Runs:</h2>
+      <button id='plus'>+</button>
+      <button id='minus'>-</button>
       <h2>Sound:</h2>
-    </div>
-    </div>
+      <button id='note'>music</button>
+      <button id='keyboard'>keyboard</button></div>
+    
     <script src="app.js"></script>
   </body>
 </html>
