@@ -22,6 +22,7 @@ const innScores = {
     hR : document.querySelector('#hR')
 };
 
+/** adding to and subtracting from score */
 let add = document.querySelector('#plus');
 let subtract = document.querySelector('#minus');
 let team = document.querySelector('#team')
@@ -29,7 +30,7 @@ let inning = document.querySelector('#inning')
 add.addEventListener("click", addRun);
 subtract.addEventListener('click', subtractRun);
 
-function getBoxName() {
+function getBoxName() { /** generate the name of the current box based on drop down menus */
     let boxName = '';
     if (team.value == 'home') {
         boxName += 'hin'
@@ -41,13 +42,12 @@ function getBoxName() {
     return boxName;
 }
 
-function addRun() {
+function addRun() { /** add to the inning score */
     let box = getBoxName();
     let score = parseInt(innScores[box].innerHTML);
     score += 1;
     innScores[box].innerHTML = score;
-    if (team.value == 'home') {
-        console.log(innScores.hR.innerHTML)
+    if (team.value == 'home') { /** add to the total score */
         let totalScore = parseInt(innScores.hR.innerHTML);
         totalScore += 1;
         innScores.hR.innerHTML = totalScore
@@ -59,6 +59,36 @@ function addRun() {
     }
 }
 
-function subtractRun() {
+function subtractRun() { /** subtract from the inning score */
+    let box = getBoxName();
+    let score = parseInt(innScores[box].innerHTML);
+    if (score >= 1) {
+        score -= 1;
+        innScores[box].innerHTML = score;
+        if (team.value == 'home') { /** subtract from the total score */
+            console.log(innScores.hR.innerHTML)
+            let totalScore = parseInt(innScores.hR.innerHTML);
+            totalScore -= 1;
+            innScores.hR.innerHTML = totalScore
+        }
+        else {
+            let totalScore = parseInt(innScores.aR.innerHTML);
+            totalScore -= 1;
+            innScores.aR.innerHTML = totalScore
+        }
+    }
+}
 
+/** handling audio */
+let random = document.querySelector('#note')
+random.addEventListener("click", generateAudio);
+
+function generateAudio () {
+    let num = Math.floor(Math.random() * 3);
+    //if (num == 0) {
+        audioObj = new Audio('sounds/buildup.mp3');
+        audioObj.addEventListener("canplaythrough", event => {
+            audioObj.play();
+          });
+    //}
 }
