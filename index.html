@@ -55,29 +55,35 @@
     <div id='controlcenter'>
     <h1>CONTROL CENTER</h1>
 
-    <div>
-      <h2 id='inline'>Who:</h2>
-      <select name='team'>
-        <option value='away'>Away</option>
-        <option value='home'>Home</option>
-      </select></div>
-    <div>
-      <h2>Inning:</h2>
-      <select name='inning'>
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
-        <option value='5'>5</option>
-        <option value='6'>6</option>
-        <option value='7'>7</option>
-      </select></div>
-      <h2>Runs:</h2>
-      <button id='plus'>+</button>
-      <button id='minus'>-</button>
-      <h2>Sound:</h2>
-      <button id='note'>music</button>
-      <button id='keyboard'>keyboard</button></div>
+    <table>
+      <tr> <!--select team-->
+        <td id='cctext'>Who:</td>
+        <td><select name='team'>
+            <option value='away'>Away</option>
+            <option value='home'>Home</option>
+          </select></td>
+        <td id='cctext'>Inning:</td> <!--select inning-->
+        <td><select name='inning'>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td id='cctext'>Runs</td> <!--add or subtract runs-->
+        <td><button id='plus'>+</button>
+          <button id='minus'>-</button></br></td>
+      </tr>
+      <tr>
+        <td id='cctext'>Sound:</td> <!--play music-->
+        <td><button id='note'>&#127925</button>
+          <button id='keyboard'>&#127929</button></div></td>
+      </tr>
+    </table>
     
     <script src="app.js"></script>
   </body>

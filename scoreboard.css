@@ -18,7 +18,8 @@ div {
 
 h2,
 h3,
-box {
+box,
+#cctext {
   /* text formatting */
   font-size: 12pt;
   font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +29,7 @@ box {
 
 h1 {
   /* field name formatting */
-  font-size: 20pt;
+  font-size: 28pt;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin: 0px 0px 20px 0px;
@@ -59,4 +60,8 @@ em {
   /* change emphasis element to bold */
   font-style: normal;
   font-weight: bold;
+}
+
+#inline {
+  display: inline;
 }
