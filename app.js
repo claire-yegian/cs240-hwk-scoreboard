@@ -2,7 +2,7 @@
  * Scoreboard Homework
  * @ClaireYegian
  */
-const innScores = {
+const innScores = { /** object to store boxes */
     ain1 :  document.querySelector('#ain1'),
     ain2 :  document.querySelector('#ain2'),
     ain3 :  document.querySelector('#ain3'),
@@ -66,7 +66,6 @@ function subtractRun() { /** subtract from the inning score */
         score -= 1;
         innScores[box].innerHTML = score;
         if (team.value == 'home') { /** subtract from the total score */
-            console.log(innScores.hR.innerHTML)
             let totalScore = parseInt(innScores.hR.innerHTML);
             totalScore -= 1;
             innScores.hR.innerHTML = totalScore
@@ -121,7 +120,7 @@ function generateAudio() {
     }
 }
 
-function playChicken() {
+function playChicken() { /** play the chicken dance audio and display the chicken picture */
     audioObj = new Audio('sounds/chickendance.mp3');
     audioObj.addEventListener("canplaythrough", event => {
         audioObj.play();

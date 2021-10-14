@@ -1,4 +1,5 @@
 div {
+  /* group elements of the scoreboard and control center together */
   display: inline-block;
 }
 
@@ -60,8 +61,4 @@ em {
   /* change emphasis element to bold */
   font-style: normal;
   font-weight: bold;
-}
-
-#inline {
-  display: inline;
 }
