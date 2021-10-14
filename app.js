@@ -82,13 +82,50 @@ function subtractRun() { /** subtract from the inning score */
 /** handling audio */
 let random = document.querySelector('#note')
 random.addEventListener("click", generateAudio);
+let chicken = document.querySelector('#keyboard')
+chicken.addEventListener("click", playChicken);
 
-function generateAudio () {
+function generateAudio() {
+    /** generate a random song and play it */
     let num = Math.floor(Math.random() * 3);
-    //if (num == 0) {
+    if (num == 0) {
         audioObj = new Audio('sounds/buildup.mp3');
         audioObj.addEventListener("canplaythrough", event => {
             audioObj.play();
           });
-    //}
+    }
+    else if (num == 1) {
+        audioObj = new Audio('sounds/charge1.mp3');
+        audioObj.addEventListener("canplaythrough", event => {
+            audioObj.play();
+          });
+    }
+    else if (num == 2) {
+        audioObj = new Audio('sounds/charge2.mp3');
+        audioObj.addEventListener("canplaythrough", event => {
+            audioObj.play();
+          });
+    }
+
+    /** generate a random photo and display it */
+    let num2 = Math.floor(Math.random() * 3);
+    let image = document.querySelector('#photo');
+    if (num2 == 0) {
+        image.src = 'images/megaphone.png'
+    }
+    else if (num2 == 1) {
+        image.src = 'images/sdchicken.jpg'
+    }
+    else if (num2 == 2) {
+        image.src = 'images/ups.png'
+    }
+}
+
+function playChicken() {
+    audioObj = new Audio('sounds/chickendance.mp3');
+    audioObj.addEventListener("canplaythrough", event => {
+        audioObj.play();
+    });
+    let image = document.querySelector('#photo');
+    image.src = 'images/sdchicken.jpg'
 }
